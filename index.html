@@ -1,0 +1,38 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+      <!-- Flowplayer skin -->
+  <link rel="stylesheet" href="//releases.flowplayer.org/7.2.5/skin/skin.css">
+
+      <!-- Flowplayer depends on jquery 1.7.2+ for video tag based installations -->
+  <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+         <!-- Flowplayer library -->
+  <script src="//releases.flowplayer.org/7.2.5/flowplayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  
+</head>
+
+<body>
+
+  <div id="player">
+  </div>
+  <script>
+
+    $(function() {
+      $('#player').flowplayer({
+        autoplay: true,
+        debug: true,
+        clip: {
+          sources: [
+            { type: 'application/x-mpegurl', src: '/audi_rs3.hls/index.m3u8' }
+          ]
+        }
+      })
+    })
+
+  </script>
+
+</body>
+</html>
